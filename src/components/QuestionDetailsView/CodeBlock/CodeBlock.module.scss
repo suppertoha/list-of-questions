@@ -1,0 +1,36 @@
+.codeBlock {
+	position: relative;
+	margin: 0 0 0.75em;
+	border-radius: 8px;
+	background-color: #f3f2f7;
+}
+
+.pre {
+	margin: 0;
+	padding: 12px 96px 12px 12px;
+	overflow-x: auto;
+	border-radius: 8px;
+	background: transparent;
+}
+
+.copyButton {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	padding: 4px 10px;
+	border: 1px solid #e0dce8;
+	border-radius: 6px;
+	background-color: #fff;
+	color: #474747;
+	font-size: 12px;
+	font-weight: 500;
+	cursor: pointer;
+	transition:
+		color 0.15s ease,
+		border-color 0.15s ease;
+
+	&:hover {
+		border-color: #6a0bff;
+		color: #6a0bff;
+	}
+}

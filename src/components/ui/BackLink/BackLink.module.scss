@@ -1,0 +1,21 @@
+.root {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	align-self: flex-start;
+	color: #6a0bff;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.2;
+	text-decoration: none;
+
+	&:hover {
+		opacity: 0.85;
+	}
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	color: #6a0bff;
+}

@@ -1,0 +1,28 @@
+.modal {
+	width: 330px;
+	height: 100vh;
+	max-height: 100dvh;
+	padding-top: 30px;
+	overflow-y: auto;
+	box-shadow: 0 4px 10px 0 rgba(106, 99, 118, 0.1);
+	background: #fff;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 10;
+}
+
+.close {
+	display: flex;
+	position: absolute;
+	right: 17px;
+	top: 17px;
+	padding: 0;
+	background-color: transparent;
+	border: 0;
+	z-index: 1;
+
+	svg {
+		color: #f3164e;
+	}
+}

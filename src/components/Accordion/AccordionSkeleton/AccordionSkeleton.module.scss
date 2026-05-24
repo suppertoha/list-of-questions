@@ -1,0 +1,24 @@
+.skeletonCard {
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(106, 99, 118, 0.1);
+	background: #fff;
+	padding: 16px 24px;
+}
+
+.skeletonHead {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+		gap: 12px;
+}
+
+.skeletonTitle {
+	height: 28px;
+	width: 70%;
+}
+
+.skeletonIcon {
+	height: 24px  !important;
+	width: 24px  !important;
+	border-radius: 50% !important;
+}

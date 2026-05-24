@@ -1,0 +1,58 @@
+.root {
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.items {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.item {
+}
+
+.arrow {
+	all: unset;
+	cursor: pointer;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #6a0bff;
+	color: #6a0bff;
+	transition: 0.3s;
+
+	&:hover {
+		background-color: rgb(240 231 255/50%);
+	}
+}
+
+.buttonEl {
+	border: none;
+	background: transparent;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 120%;
+	color: #474747;
+	border-radius: 2px;
+	background: transparent;
+}
+
+.active {
+	padding: 2px 6px;
+	width: 21px;
+	height: 25px;
+	border-radius: 3px;
+	background: #6a0bff;
+	color: #fff;
+}
+
+.more {
+	color: #6a0bff;
+}

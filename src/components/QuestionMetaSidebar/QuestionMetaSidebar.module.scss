@@ -1,0 +1,164 @@
+.sidebarColumn {
+	align-self: flex-start;
+	position: sticky;
+	top: 20px;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	gap: 16px;
+	width: 392px;
+}
+
+.root {
+	width: 100%;
+	padding: 24px;
+	border-radius: 24px;
+	background: #fff;
+	box-shadow: 0 4px 10px rgba(106, 99, 118, 0.1);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+}
+
+.sectionTitle {
+	margin: 0;
+	color: #474747;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 19.2px;
+	opacity: 0.66;
+}
+
+.levelRow {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.statBox {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	padding: 6px 10px;
+	border-radius: 8px;
+	background: #f8f8f8;
+}
+
+.statLabel {
+	color: #303030;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.statBadge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 24px;
+	padding: 2px 4px;
+	border-radius: 4px;
+	background: #6a0bff;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.skillTag {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 12px;
+	border-radius: 12px;
+	border: 1px solid #6a0bff;
+	color: #303030;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.2;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+
+	&:hover {
+		background-color: #f4edff;
+	}
+}
+
+.skillIcon,
+.skillIconImg {
+	width: 20px;
+	height: 20px;
+	border-radius: 6px;
+	flex-shrink: 0;
+}
+
+.skillIcon {
+	background: linear-gradient(
+		135deg,
+		#ff7361 0%,
+		#b659ff 50%,
+		#00cf7f 100%
+	);
+}
+
+.skillIconImg {
+	display: block;
+	object-fit: cover;
+}
+
+.keywords {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 14px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.keyword {
+	color: #6a0bff;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25.6px;
+	text-decoration: none;
+	transition: opacity 0.2s ease;
+
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+.author {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.authorLabel {
+	color: #303030;
+}
+
+.authorName {
+	color: #6a0bff;
+}
+
+@media (max-width: 1024px) {
+	.sidebarColumn {
+		display: none;
+	}
+}

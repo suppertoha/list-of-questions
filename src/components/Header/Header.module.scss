@@ -1,0 +1,26 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+	.wrapper {
+		position: relative;
+		z-index: 5;
+		background: #ffffff;
+		border-bottom: 1px solid #e8e8e8;
+		padding: 7px 0;
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.block {
+		display: flex;
+		align-items: center;
+		gap: 52px;
+
+		@include media($xl) {
+			gap: 20px;
+		}
+	}

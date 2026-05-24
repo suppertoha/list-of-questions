@@ -1,0 +1,102 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+	.desktop {
+		display: flex;
+		align-items: center;
+		gap: 21px;
+	}
+
+	.desktop_link {
+		font-size: 16px;
+		font-weight: 500;
+		color: #191919;
+		cursor: pointer;
+		transition: color 0.2s ease;
+		align-items: center;
+		border-radius: 12px;
+		display: flex;
+		min-height: 38px;
+		padding: 6px 10px;
+		text-decoration: none;
+
+		&:hover {
+			background-color: #f8f8f8;
+			color: #6a0bff;
+		}
+	}
+
+	.linkActive {
+		color: #5509cc;
+	}
+
+	.mobile {
+		position: relative;
+	}
+
+	.button {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		cursor: pointer;
+
+		svg {
+			color: #303030;
+			transition: 0.3s;
+			width: 24px;
+			height: 24px;
+		}
+		background-color: transparent;
+		padding: 0;
+		border: none;
+	}
+
+	.row {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		width: 200px;
+		position: absolute;
+		left: -10px;
+		top: 44px;
+		z-index: 2;
+		border-radius: 0 0 6px 6px;
+		overflow: hidden;
+		padding: 6px;
+		box-shadow: 0 0 10px -2px #0000001f;
+		background-color: #fff;
+
+		@include media($xl) {
+			top: 36px;
+		}
+	}
+
+	.link {
+		font-size: 16px;
+		font-weight: 500;
+		color: #191919;
+		cursor: pointer;
+		transition: color 0.2s ease;
+		align-items: center;
+		border-radius: 12px;
+		display: flex;
+		min-height: 38px;
+		padding: 6px 10px;
+		text-decoration: none;
+
+		&:hover {
+			background-color: #f8f8f8;
+			color: #6a0bff;
+		}
+	}
+
+	.link_active {
+		color: #5509cc;
+	}
+
+	.link_active {
+		svg {
+			transform: rotate(0deg);
+		}
+	}
+

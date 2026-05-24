@@ -1,0 +1,298 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.pageShell {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	max-width: 1216px;
+	margin: 0 auto;
+}
+
+.card {
+	width: 100%;
+	max-width: 1216px;
+	margin: 0 auto;
+	padding: 24px;
+	background: #fff;
+	border-radius: 24px;
+	box-shadow: 0 4px 10px rgba(106, 99, 118, 0.1);
+
+	@include media($sm) {
+		padding: 20px 10px;
+	}
+}
+
+.form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 48px;
+
+	@include media($sm) {
+		gap: 20px;
+	}
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 12px;
+}
+
+.content {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	@include media($sm) {
+		gap: 16px;
+	}
+}
+
+.title {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #191919;
+
+	@include media($sm) {
+		font-size: 20px;
+	}
+}
+
+.columns {
+	display: flex;
+	align-items: flex-start;
+	gap: 48px;
+
+	@include media($lg) {
+		flex-direction: column;
+		gap: 24px;
+	}
+}
+
+.leftColumn {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 21px;
+}
+
+.rightColumn {
+	width: 100%;
+	max-width: 408px;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	@include media($lg) {
+		max-width: none;
+	}
+
+	@include media($sm) {
+		gap: 16px;
+	}
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.label {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #474747;
+}
+
+.statusText {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #757575;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.tag {
+	height: 42px;
+	padding: 6px 12px;
+	border-radius: 12px;
+	border: 1px solid #bababa;
+	background: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #bababa;
+	cursor: pointer;
+	transition:
+		border-color 0.2s,
+		color 0.2s;
+
+	&:hover {
+		border-color: #6a0bff;
+	}
+
+	&.tagActive {
+		border-color: #6a0bff;
+		color: #303030;
+	}
+}
+
+.tagCompact {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.skillTag {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 12px;
+	border-radius: 12px;
+	border: 1px solid #bababa;
+	background: #fff;
+	cursor: pointer;
+	transition:
+		border-color 0.2s,
+		color 0.2s;
+
+	&:hover {
+		border-color: #6a0bff;
+	}
+
+	&.tagActive {
+		border-color: #6a0bff;
+
+		.skillLabel {
+			color: #303030;
+		}
+	}
+}
+
+.skillIcon {
+	display: flex;
+	flex-shrink: 0;
+	color: #bababa;
+
+	svg {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.skillIconActive {
+	color: #303030;
+}
+
+.skillLabel {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #bababa;
+
+	@include media($sm) {
+		font-size: 14px;
+	}
+}
+
+.counter {
+	display: inline-flex;
+	align-items: center;
+	gap: 16px;
+	height: 42px;
+	padding: 10px 12px;
+	border-radius: 12px;
+	border: 1px solid #bababa;
+	width: fit-content;
+}
+
+.counterBtn {
+	display: flex;
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+	color: #bababa;
+
+	&:hover {
+		color: #303030;
+	}
+}
+
+.counterIcon {
+	display: flex;
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.counterValue {
+	min-width: 24px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #bababa;
+
+	@include media($sm) {
+		font-size: 14px;
+	}
+}
+
+.startBtn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 170px;
+	height: 48px;
+	padding: 13px 20px;
+	border: none;
+	border-radius: 12px;
+	background: #6a0bff;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.1;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.2s;
+
+	&:hover:not(:disabled) {
+		background: #5509cc;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+}
+
+.startIcon {
+	display: flex;
+	color: #fff;
+
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+}

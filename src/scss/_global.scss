@@ -1,0 +1,25 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+	@include media($lg) {
+		padding: 0 30px;
+	}
+
+	@include media($sm) {
+		padding: 0 10px;
+	}
+}
