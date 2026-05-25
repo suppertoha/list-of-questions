@@ -21,7 +21,7 @@
 - Redux Toolkit, RTK Query
 - React Hook Form
 - TypeScript, SCSS Modules
-- API: [api.yeatwork.ru](https://api.yeatwork.ru)
+- API: [api.yeatwork.ru](https://api.yeatwork.ru) (через прокси `/api`)
 
 ## Быстрый старт
 
@@ -34,7 +34,7 @@ npm run dev
 
 Приложение: http://localhost:3000
 
-> Для локальной разработки используйте порт **3000** — API настроен под этот origin (CORS).
+> Dev-сервер на порту **3000**; запросы к API идут на `/api` (прокси в `vite.config.js`).
 
 ## Скрипты
 
@@ -90,9 +90,14 @@ src/
 
 ## API
 
-Базовый URL: `https://api.yeatwork.ru`
+Клиент ходит на **`/api`** (тот же origin, без CORS в браузере):
 
-Основные эндпоинты:
+- **локально** — Vite dev proxy → `https://api.yeatwork.ru`
+- **Vercel** — rewrite в `vercel.json`
+
+Бэкенд: [api.yeatwork.ru](https://api.yeatwork.ru)
+
+Основные эндпоинты (после прокси путь тот же):
 
 - `GET /questions/public-questions`
 - `GET /questions/public-questions/:id`
@@ -102,7 +107,7 @@ src/
 
 Проект — SPA. В `vercel.json` настроены rewrites:
 
-1. Прокси `/api/*` → API (если переключите `baseUrl` на `/api`)
+1. Прокси `/api/*` → `https://api.yeatwork.ru`
 2. Fallback `/(.*)` → `/index.html` для клиентского роутинга
 
 После изменения конфига выполните redeploy.
