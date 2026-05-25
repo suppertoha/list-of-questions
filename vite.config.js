@@ -14,11 +14,7 @@ export default defineConfig({
   },
   css: {
     modules: {
-      // [name] - имя файла (например, Accordion)
-      // [local] - твой класс (например, wrapper)
-      // [hash] - короткий хеш, чтобы стили не конфликтовали
       generateScopedName: '[name]_[local]__[hash:base64:5]',
     },
   },
-  // ------------------------
 })
